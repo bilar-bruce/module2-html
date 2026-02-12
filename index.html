@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal Online CV</title>
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 
 <header>
-        <section>
-            <h1>Bruce</h1> 
-            <p>IT Student | Web Systems and Technologies</p>
+        <section class="card">
+            <h1>Bruce Steven A. Bilar</h1> 
+            <p id="headersub">IT Student | Web Systems and Technologies</p>
         </section>
     </header>
 
     <main>
-        <section>
+        <div class="container">
+        <section class="card">
             <h2>About Me</h2>
             <p>I am a BSIT student, 19 years old, I love playing Diablo 2: Resurrected, and I'm Interested in Networking and Database (as of now lol).</p>
-            <img src="images/profile.jpeg" alt="Profile photo" width="150">
+            <img id="profile-pic" src="images/profile.jpeg" alt="Profile photo" width="150">
         </section>
 
-<section>
+<section class="card">
     <h2>Skills</h2>
     <ul>
         <li>HTML</li>
@@ -45,19 +47,19 @@
         </li> </ul>
 </section>
 
-<section>
+<section class="card">
         <h2>Contact Information</h2>
         <p>Facebook: <a href="https://www.facebook.com/bruce.bilar.2024">https://www.facebook.com/bruce.bilar.2024</a></p>
         <p>Email: <a href="mailto:bilar.bruce@gmail.com">bilar.bruce@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/bilar-bruce" target="_blank">https://github.com/bilar-bruce</a></p>
     </section>
 
-    <section>
+    <section class="card">
     <h2>Education</h2>
     <style>
         table, th, td {border-collapse: collapse; width: 300px ; padding: 8px solid black; text-align: center;}
     </style>
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Level</th>
@@ -91,7 +93,7 @@
 </section>
     
 
-    <section>
+    <section class="card">
         <h2>Contact Me</h2>
         <form>
             <label for="name">Name:</label><br>
@@ -106,7 +108,7 @@
             <button type="submit">Send</button>
         </form>
     </section>
-    
+    </div>
 </main>
 
 <footer>
