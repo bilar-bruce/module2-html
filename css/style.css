@@ -91,6 +91,15 @@ h1 {
                     flex-direction: column;
                     gap: 10px;
                     }
+                form label {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+
+                form br{
+                    display: none;
+                }
                     input, textarea {
                         padding: 8px;
                         border: 1px solid #ccc;
