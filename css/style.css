@@ -16,6 +16,18 @@
         margin: 0 auto;
         }
 
+        /* || Dark mode */
+        .dark-mode {
+            background-color:#222;
+            color:white;
+            }
+
+            
+        /* || Skills toggle*/
+            .hidden {
+                display:none;
+                }       
+
 /* || Card Styling */
 .card {
     background: #575757;
