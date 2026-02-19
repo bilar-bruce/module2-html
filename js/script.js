@@ -4,7 +4,6 @@ console.log("js/script.js")
 const submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click",function(event){
 event.preventDefault();
-alert("Thank you! Your message has been received.");
 });
 
 //darkmode button
@@ -28,5 +27,6 @@ submitBtn.addEventListener("click",function(event){
     alert("Please fill in all required fields.");
     } else{
     alert("Form submitted successfully!");
+    alert("Thank you! Your message has been received.");
     }
     });
