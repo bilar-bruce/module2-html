@@ -3,116 +3,150 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    }
-    body {
+}
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #c9b59c;
+    background-color: #d9d9d9; /* Updated Light background */
+    color: #353535;            /* Updated Light text */
     padding: 20px;
-    }
+    transition: background-color 0.3s, color 0.3s;
+}
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        /* || Dark mode */
-        .dark-mode {
-            background-color:#222;
-            color:white;
-            }
+/* || Dark mode */
+.dark-mode {
+    background-color: #353535; /* Updated Dark background */
+    color: #ffffff;            /* Updated Dark text */
+}
 
-            
-        /* || Skills toggle*/
-            .hidden {
-                display:none;
-                }       
+/* || Skills toggle*/
+.hidden {
+    display: none;
+}       
 
 /* || Card Styling */
 .card {
-    background: #575757;
+    background: #ffffff; /* White cards for Light Mode */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+    transition: background 0.3s, color 0.3s;
+}
+
+/* This targets cards ONLY when dark mode is active */
+.dark-mode .card {
+    background: #284b63; /* Deep Slate cards for Dark Mode */
+    color: #ffffff;
+}
 
 /* || SECTION STYLES*/
-
-#headersub {text-align: center;
+#headersub {
+    text-align: center;
     margin-bottom: 10px;
-    }
+}
 
+/* || About Me Layout (Flexbox) */
+.about-content {
+    display: flex;       /* Places items in a row */
+    align-items: center; /* Centers them vertically */
+    gap: 20px;           /* Adds clean space between the picture and text */
+}
+
+/* || Profile Picture Styling */
 #profile-pic {
     width: 150px;
-    border: 5px solid #efe9e3;
-    box-shadow: 0 4px 8px
-    rgba(0,0,0,0.2);
+    height: 150px;        /* Setting height equals to width makes it a square */
+    object-fit: cover;    /* Prevents your photo from squishing or stretching */
+    border-radius: 50%;   /* Turns the square into a perfect circle */
+    border: 4px solid #3c6e71; /* Your new Teal accent color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-shrink: 0;       /* Prevents the image from shrinking if text gets long */
 }
 
 /* || Typography */
 h1 {
     text-align: center;
     margin-bottom: 10px;
-    }
-    h2 {
+}
+
+h2 {
     margin-bottom: 10px;
     margin-top: 20px;
-    }
-    p {
-    margin-bottom: 10px;
-    }
-    ul {
-        margin-left: 20px;
-        margin-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: #0077cc;
-            }
-            a:hover {
-            color: #005fa3;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 10px;
-                }
-                th, td {
-                border: 1px solid #ccc;
-                padding: 8px;
-                }
-                th {
-                background-color: #0077cc;
-                color: white;
-                }
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    }
-                form label {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 6px;
-                }
+}
 
-                form br{
-                    display: none;
-                }
-                    input, textarea {
-                        padding: 8px;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        }
-                        button {
-                        padding: 10px;
-                        background-color: #0077cc;
-                        color: white;
-                        border: none;
-                        cursor: pointer;
-                        }
-                        button:hover {
-                        background-color: #005fa3;
-                        }
-                        
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #3c6e71; /* Teal links */
+}
+
+a:hover {
+    color: #284b63; /* Slate on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: #3c6e71; /* Teal table headers */
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+form br {
+    display: none;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3c6e71; /* Teal buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Added slight rounding to match your new aesthetic */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #284b63; /* Slate on hover */
+}
