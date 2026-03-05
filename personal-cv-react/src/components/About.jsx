@@ -1,3 +1,4 @@
+import Card from "./Card";
 import profilePic from '../assets/images/profile.jpeg';
 
 function About() {
@@ -6,13 +7,14 @@ function About() {
         <div className="container"></div>
         
         <section className="card">
-            <h2>About Me</h2>
+            <Card title="About Me">
             <div className="about-content">
                 <img id="profile-pic" src={profilePic} alt="Profile photo" />
                 <p>My name is Bruce, and I am a 2nd-year BSIT student. I am 19 years old and an avid fan of Terraria. 
                     I named my favorite AI assistant 'Jarvis'; he helps me understand complex code and provides nuggets of knowledge from time to time.
                     Looking ahead, I aspire to become a full-stack developer.</p>
             </div>
+            </Card>
         </section>
 
         <section className="card">

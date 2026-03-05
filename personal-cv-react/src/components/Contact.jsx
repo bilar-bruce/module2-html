@@ -1,9 +1,8 @@
+import { useState } from "react";
+
 function Contact() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("Message sent successfully!");
-        event.target.reset();
-    };
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
 
     return (
         <main>
@@ -12,11 +11,11 @@ function Contact() {
                     <h2>Contact Me</h2>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="name">Name:</label><br />
-                        <input type="text" id="name" name="name" placeholder="Name" required />
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                         <br /><br />
 
                         <label htmlFor="email">Email:</label><br />
-                        <input type="email" id="email" name="email" placeholder="Email" required />
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <br /><br />
 
                         <label htmlFor="message">Message:</label><br />
@@ -29,6 +28,11 @@ function Contact() {
             </div>
         </main>
     );
+
+    function handleSubmit(e) {
+    e.preventDefault();
+    alert(`Message sent successfully! ${name}!`);
+}
 }
 
 export default Contact;

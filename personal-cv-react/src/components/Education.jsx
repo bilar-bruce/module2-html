@@ -1,4 +1,5 @@
-function Education() {
+import Card from "./Card";
+function Education({ education }) {
     return (
  <section className="card">
     <h2>Education</h2>

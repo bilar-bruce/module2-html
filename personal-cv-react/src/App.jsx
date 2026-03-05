@@ -8,6 +8,27 @@ import { useState, useEffect } from "react";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const skills = [
+"HTML",
+"CSS",
+"JavaScript",
+"React"
+];
+
+  const education = [
+{
+year: "2023",
+program: "BS Information Technology",
+school: "Your University"
+},
+{
+year: "2019",
+program: "Senior High School",
+school: "Your School"
+}
+
+];
+
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add("dark-mode");
@@ -24,8 +45,8 @@ function App() {
       {/* 2. This container brings back the 800px width limit */}
       <main className="container">
           <About />
-          <Skills />
-          <Education />
+          <Skills skills = {skills} />
+          <Education education = {education}/>
           <Contact />
       </main>
 
@@ -35,5 +56,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
