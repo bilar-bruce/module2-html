@@ -6,7 +6,6 @@ function About() {
     <main>
         <div className="container"></div>
         
-        <section className="card">
             <Card title="About Me">
             <div className="about-content">
                 <img id="profile-pic" src={profilePic} alt="Profile photo" />
@@ -15,7 +14,6 @@ function About() {
                     Looking ahead, I aspire to become a full-stack developer.</p>
             </div>
             </Card>
-        </section>
 
         <section className="card">
             <h2>Contact Information</h2>
